@@ -1,18 +1,41 @@
-<form action="mailto:ksankaran@ucsd.edu" method="POST" enctype="text/plain">
-    <label>
-        Email
-        <input type="email" name="email">
-    </label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Karthik Sankaran</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
-    <label>
-        Subject
-        <input name="subject">
-    </label>
+    <h1>Contact Me</h1>
 
-    <label>
-        Message
-        <textarea name="body"></textarea>
-    </label>
+    <form action="mailto:ksankaran@ucsd.edu" method="POST" enctype="text/plain">
+        
+        <label>
+            Email:
+            <input type="email" name="email" required>
+        </label>
 
-    <button>Submit</button>
-</form>
+        <br><br>
+
+        <label>
+            Subject:
+            <input name="subject">
+        </label>
+
+        <br><br>
+
+        <label>
+            Message:
+            <textarea name="body"></textarea>
+        </label>
+
+        <br><br>
+
+        <button>Send Message</button>
+
+    </form>
+
+</body>
+</html>
