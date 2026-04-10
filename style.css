@@ -91,7 +91,7 @@ form button {
   margin: 0;
 }
 
-/*  resume styling*/
+/* Resume styling */
 section {
   margin-bottom: 2.5em;
 }
@@ -120,7 +120,7 @@ section article header h3 {
 
 section article p {
   margin: 0.25em 0;
-  color: oklch(40% 0.05 200); 
+  color: oklch(40% 0.05 200);
 }
 
 section article ul {
