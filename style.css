@@ -90,3 +90,40 @@ form button {
 .projects h2 {
   margin: 0;
 }
+
+/*  resume styling*/
+section {
+  margin-bottom: 2.5em;
+}
+
+section h2 {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.3em;
+  margin-bottom: 1em;
+  color: var(--color-accent);
+}
+
+section article {
+  margin-bottom: 1.5em;
+}
+
+section article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+section article header h3 {
+  margin: 0;
+}
+
+section article p {
+  margin: 0.25em 0;
+  color: oklch(40% 0.05 200); 
+}
+
+section article ul {
+  margin-top: 0.5em;
+  padding-left: 1.5em;
+}
