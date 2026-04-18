@@ -130,7 +130,7 @@ section article header h3 {
 
 section article p {
   margin: 0.25em 0;
-  color: oklch(40% 0.05 200);
+  opacity: 0.8;
 }
 
 section article ul {

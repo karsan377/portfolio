@@ -70,14 +70,6 @@ let form = document.querySelector('form');
 form?.addEventListener('submit', function (event) {
   event.preventDefault();
   let data = new FormData(form);
-  let url = form.action + "?";
-  let params = [];
-  
-  for (let [name, value] of data) {
-    params.push(name + "=" + encodeURIComponent(value));
-    console.log(name, value);
-  }
-  
-  url += params.join("&");
+  let url = form.action + "?" + new URLSearchParams(data).toString();
   location.href = url;
 });
