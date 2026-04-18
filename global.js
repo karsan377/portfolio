@@ -40,7 +40,6 @@ for (let p of pages) {
   nav.append(a);
 }
 
-// Step 4: Dark mode switch
 document.body.insertAdjacentHTML(
   'afterbegin',
   `
