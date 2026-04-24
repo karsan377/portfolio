@@ -137,3 +137,16 @@ section article ul {
   margin-top: 0.5em;
   padding-left: 1.5em;
 }
+
+/* Profile stats styling */
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+#profile-stats dt {
+  grid-row: 1;
+}
+#profile-stats dd {
+  grid-row: 2;
+}
