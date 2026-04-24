@@ -15,9 +15,9 @@ let pages = [
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-  ? "/"
-  : "/portfolio/"; // Make sure this matches your GitHub Pages repo name
+// Dynamically set the base path based on whether the site is hosted in a subfolder (like /portfolio/)
+// This fixes the "Cannot GET" error when Live Server is opened from a parent directory.
+const BASE_PATH = location.pathname.startsWith("/portfolio/") ? "/portfolio/" : "/";
 
 for (let p of pages) {
   let url = p.url;
@@ -29,7 +29,11 @@ for (let p of pages) {
   a.href = url;
   a.textContent = title;
 
-  if (a.host === location.host && a.pathname === location.pathname) {
+  // Normalize paths so the 'current' class highlights correctly even if index.html is in the URL
+  let currentPath = location.pathname.replace(/\/index\.html$/, "/").replace(/\/$/, "");
+  let linkPath = a.pathname.replace(/\/index\.html$/, "/").replace(/\/$/, "");
+
+  if (a.host === location.host && currentPath === linkPath) {
     a.classList.add('current');
   }
 
@@ -78,12 +82,22 @@ export async function fetchJSON(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error(`Failed to fetch projects: ${response.statusText}`);
+      // Attempt to read error message from response body if available
+      const errorBody = await response.text();
+      throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText} - ${errorBody}`);
     }
-    const data = await response.json();
-    return data;
+    // Check if the response is JSON before parsing
+    const contentType = response.headers.get("content-type");
+    if (contentType && contentType.includes("application/json")) {
+      const data = await response.json();
+      return data;
+    } else {
+      console.warn(`Response from ${url} was not JSON. Content-Type: ${contentType}`);
+      return await response.text(); // Return text if not JSON, or throw an error if JSON is strictly expected
+    }
   } catch (error) {
-    console.error('Error fetching or parsing JSON data:', error);
+    console.error('Error fetching or parsing data:', error);
+    throw error; // Re-throw the error to allow calling functions to handle it
   }
 }
 
