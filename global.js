@@ -9,7 +9,7 @@ let pages = [
   { url: 'projects/', title: 'Projects' },
   { url: 'contact/', title: 'Contact' },
   { url: 'resume/', title: 'Resume' },
-  { url: 'https://github.com/yourusername', title: 'GitHub' } // Replace with your actual GitHub URL
+  { url: 'https://github.com/karsan377', title: 'GitHub' } // Replace with your actual GitHub URL
 ];
 
 let nav = document.createElement('nav');

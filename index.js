@@ -9,8 +9,7 @@ if (projectsContainer) {
   renderProjects(latestProjects, projectsContainer, 'h2');
 }
 
-// Fetch and display GitHub profile stats
-const githubData = await fetchGitHubData('your-github-username'); // Remember to replace this string!
+const githubData = await fetchGitHubData('karsan377');
 const profileStats = document.querySelector('#profile-stats');
 
 if (profileStats && githubData) {
