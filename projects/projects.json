@@ -1,74 +1,74 @@
 [
   {
-    "title": "Project 1",
-    "year": "2024",
+    "title": "BiterFighter",
+    "year": "2025",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 1."
+    "description": "This Flask application provides AI-assisted diagnosis and treatment guidance for bug bites, combining image classification with personalized recommendations using an LLM (Ollama via LangChain)."
   },
   {
-    "title": "Project 2",
+    "title": "Wildfire-Risk-Predictor",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Predicts wildfire risk using weather API call and computationally-cheap computer vision."
+  },
+  {
+    "title": "blurBS",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "RAG-LLM based fact-checking for medically factual browsing."
+  },
+  {
+    "title": "Bankruptcy",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Finds business metrics that forewarn of bankruptcy using data analysis in Jupyter Notebooks."
+  },
+  {
+    "title": "GoalWarning",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Program that records audio stream volume amplitude and sends email warning of a potential goal-scoring opportunity in football/soccer when afk."
+  },
+  {
+    "title": "Power-Outage-Economic-Analysis",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "DSC 80 Final Project: Data analysis on the economic impacts of power outages."
+  },
+  {
+    "title": "EPL-Midfielder-Analysis",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "COGS108 Final Project -- Group110_SP25 Repository."
+  },
+  {
+    "title": "cityairwatch",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Built ETL pipelines for tracking and analyzing air quality using Python."
+  },
+  {
+    "title": "LinkedOut",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "SDSU Hackathon project (CAKE) developed in Python."
+  },
+  {
+    "title": "soccermatics",
+    "year": "2025",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Forked exploration of mathematical modeling in soccer. Documentation available on ReadTheDocs."
+  },
+  {
+    "title": "Portfolio Website",
+    "year": "2026",
+    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+    "description": "Personal site and portfolio built dynamically using HTML, CSS, and modern JavaScript modules."
+  },
+  {
+    "title": "Mini-SMG",
     "year": "2023",
     "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 2."
-  },
-  {
-    "title": "Project 3",
-    "year": "2024",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 3."
-  },
-  {
-    "title": "Project 4",
-    "year": "2022",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 4."
-  },
-  {
-    "title": "Project 5",
-    "year": "2023",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 5."
-  },
-  {
-    "title": "Project 6",
-    "year": "2021",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 6."
-  },
-  {
-    "title": "Project 7",
-    "year": "2024",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 7."
-  },
-  {
-    "title": "Project 8",
-    "year": "2022",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 8."
-  },
-  {
-    "title": "Project 9",
-    "year": "2023",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 9."
-  },
-  {
-    "title": "Project 10",
-    "year": "2024",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 10."
-  },
-  {
-    "title": "Project 11",
-    "year": "2022",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 11."
-  },
-  {
-    "title": "Project 12",
-    "year": "2024",
-    "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-    "description": "Placeholder description for project 12."
+    "description": "Java project developed in Fall 2023."
   }
 ]
