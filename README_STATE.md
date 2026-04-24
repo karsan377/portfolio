@@ -39,3 +39,12 @@ You will need to manually configure your Projects HTML document to integrate the
    `<script src="projects.js" type="module"></script>`
 2. Delete all the hardcoded `<article>` tags lying inside `<div class="projects">`.
 3. Find the main page header tag (likely `<h1>Projects</h1>`) and attach the `projects-title` class: `<h1 class="projects-title">Projects</h1>`. This allows the script to inject the count correctly.
+
+
+
+Separation of Concerns (Data & UI): You extracted all the hardcoded <article> elements from your HTML and moved the content into a dedicated lib/projects.json file. This means your data is now decoupled from your HTML.
+Reusable JavaScript Utilities: You created fetchJSON and renderProjects functions inside global.js. This allows you to effortlessly render projects on any page (Home, Projects, etc.) without duplicating logic.
+Array Slicing for Homepage: You used JavaScript array methods (.slice(0, 3)) inside index.js to parse your data and automatically feature only the top 3 latest projects on your homepage.
+Live API Integration: You leveraged the fetch() API and Async/Await functions to pull down real-time stats from GitHub (fetchGitHubData). Now, every time someone views your page, it reflects your up-to-date follower, gist, and repository count automatically!
+Dynamic DOM Manipulation: Using Template Literals (${}), you safely parsed the JSON object into HTML strings. You also added an automatic project counter on the Projects page that calculates the total length of the projects array and injects it right into the page's <h1> title!
+Advanced CSS Grid Implementation: You formatted the newly injected GitHub statistics by targeting the definition list (<dl>) in your CSS and using grid-template-columns to create a clean, responsive layout.
