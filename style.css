@@ -97,6 +97,13 @@ form button {
   gap: 1em;
 }
 
+.projects article .year {
+  font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+  font-variant-numeric: oldstyle-nums;
+  color: dimgray;
+  margin: 0;
+}
+
 .projects h2 {
   margin: 0;
 }
@@ -149,4 +156,63 @@ section article ul {
 }
 #profile-stats dd {
   grid-row: 2;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.container .legend {
+  flex: 1;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em 1em;
+  border: 1px solid var(--border-color, #ccc);
+  padding: 1em;
+  margin: 1em 0;
+  list-style: none;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.legend .swatch {
+  width: 1em;
+  height: 1em;
+  background-color: var(--color);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#projects-pie-plot path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+#projects-pie-plot:has(path:hover) path:not(:hover) {
+  opacity: 0.5;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+}
+
+.selected:is(path) {
+  fill: var(--color);
 }
