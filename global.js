@@ -83,22 +83,22 @@ export async function fetchJSON(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      // Attempt to read error message from response body if available
+      
       const errorBody = await response.text();
       throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText} - ${errorBody}`);
     }
-    // Check if the response is JSON before parsing
+    
     const contentType = response.headers.get("content-type");
     if (contentType && contentType.includes("application/json")) {
       const data = await response.json();
       return data;
     } else {
       console.warn(`Response from ${url} was not JSON. Content-Type: ${contentType}`);
-      return await response.text(); // Return text if not JSON, or throw an error if JSON is strictly expected
+      return await response.text();
     }
   } catch (error) {
     console.error('Error fetching or parsing data:', error);
-    throw error; // Re-throw the error to allow calling functions to handle it
+    throw error; 
   }
 }
 
